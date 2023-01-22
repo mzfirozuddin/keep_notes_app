@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary:#EDC126;
+    --secondary:#0D0D0D;
+    --light:#edf0f1;
+    --danger:#E83A59;
+    --success:#1C8D73;
+    --save:#35BDD0;
+    --pure:#ffffff;
+
+}
+
+body{
+    background: var(--light);
+    font-family: 'Poppins', sans-serif;
+}
+
+header.navbar{
+    background: var(--primary);
+    padding: 0.5rem 2rem;
+    margin-bottom: 1rem;
+}
+
+header.navbar i{
+   margin-right: 1rem;
+}
+
+div.add{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 10rem;
+    margin-bottom: 1rem;
+}
+
+div.add button{
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: var(--primary);
+    color: var(--pure);
+    cursor: pointer;
+    transition: all .4s ease;
+    
+}
+
+div.add button:hover, div.add button:active{
+    background-color: var(--pure);
+    color: var(--secondary);
+    outline: none;
+    border: 1px solid var(--primary);
+}
+
+
+div.note{
+    margin: 1.8rem;
+    /* background-color: #1C8D73; */
+    background: var(--pure);
+    width: 20rem;
+    height: 12rem;
+    display: inline-block;
+    border-radius: 4px;
+    overflow-y: scroll;
+}
+
+div.note .operation{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.4rem;
+    background: var(--primary);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+}
+
+div.note .operation button{
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--pure);
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.7rem;
+    transition: all 0.4s linear;
+}
+
+div.note .operation button.save{
+    padding: 0.4rem 0.5rem;
+    border-radius: 50%;
+    background: var(--save);
+    outline: none;
+    
+}
+
+div.note .operation button.save:hover,div.note .operation button.save:active{
+    color: var(--save);
+    background: var(--pure);
+    border: 1px solid var(--save);
+}
+
+div.note .operation button.edit{
+    padding: 0.4rem 0.5rem;
+    border-radius: 50%;
+    background: var(--success);
+}
+
+div.note .operation button.edit:hover,div.note .operation button.edit:active{
+    color: var(--success);
+    background: var(--pure);
+    border: 1px solid var(--success);
+}
+
+div.note .operation button.delete{
+    padding: 0.4rem 0.5rem;
+    border-radius: 50%;
+    background: var(--danger);
+}
+
+div.note .operation button.delete:hover,div.note .operation button.delete:active{
+    color: var(--danger);
+    background: var(--pure);
+    border: 1px solid var(--danger);
+}
+
+.main{
+    padding: 0.5rem 0.8rem;
+}
+
+div.note textarea{
+  width: 100%;
+  height: 75%;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  /* resize: vertical; */
+  resize: none;
+}
+
+/* Remove the default scrollbar from textarea */
+div.note textarea::-webkit-scrollbar{
+    display: none;
+}
+
+
+.hidden{
+    display: none;
+}
+
